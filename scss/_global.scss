@@ -1,0 +1,80 @@
+// Global styling for this template (Dark Luxury / Crimson & Gold)
+
+body {
+  @include body-font;
+  background-color: var(--bg);
+  padding-top: 54px;
+  color: var(--muted);
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 0;
+    padding-left: $sidebar-base-width;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include heading-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 5.5rem;
+}
+
+.resume-name {
+  text-transform: none;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 3.25rem;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 2.375rem;
+  }
+}
+
+.subheading {
+  text-transform: uppercase;
+  font-weight: 500;
+  @include heading-font;
+  font-size: 1.35rem;
+  color: var(--gold);
+}
+
+.list-social-icons {
+  a {
+    color: var(--soft);
+    &:hover,
+    &:focus {
+      color: var(--red);
+    }
+    .fa-lg {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.list-icons {
+  font-size: 3rem;
+  color: var(--muted);
+  .list-inline-item i {
+    &:hover {
+      color: var(--red);
+    }
+  }
+}

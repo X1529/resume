@@ -1,0 +1,8 @@
+// Mixins
+// Font family stacks are driven by CSS variables from _theme.scss
+@mixin body-font {
+  font-family: var(--sans);
+}
+@mixin heading-font {
+  font-family: var(--serif);
+}

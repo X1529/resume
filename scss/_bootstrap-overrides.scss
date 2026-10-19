@@ -1,0 +1,45 @@
+// Bootstrap utility + component overrides for the Crimson & Gold theme
+
+.bg-primary {
+  background-color: var(--panel) !important;
+}
+
+.text-primary {
+  color: var(--gold) !important;
+}
+
+a {
+  color: var(--soft);
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--red);
+  }
+}
+
+.btn-primary {
+  background-color: var(--red);
+  border-color: var(--red);
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--red-dark);
+    border-color: var(--red-dark);
+  }
+}
+
+.btn-outline-secondary {
+  border-color: var(--line);
+  color: var(--soft);
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--panel-2);
+    border-color: var(--line);
+    color: var(--text);
+  }
+}

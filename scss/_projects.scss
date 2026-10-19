@@ -1,0 +1,103 @@
+// Project portfolio cards (Awards & Certifications section) — Crimson & Gold
+
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  padding: 1.25rem;
+  background-color: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.35);
+  color: var(--muted);
+  text-decoration: none;
+  transition: transform 0.2s ease-out,
+              box-shadow 0.2s ease-out,
+              border-color 0.2s ease-out,
+              color 0.2s ease-out;
+
+  &:hover,
+  &:focus {
+    color: var(--muted);
+    border-color: var(--red);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.45);
+    transform: translateY(-4px);
+
+    .project-card-title {
+      color: var(--gold);
+    }
+    .project-card-icon {
+      color: var(--red);
+      border-color: var(--red);
+    }
+    .project-card-link-icon {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+}
+
+.project-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background-color: var(--panel-2);
+  color: var(--gold);
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.project-card-title {
+  display: flex;
+  align-items: center;
+  @include heading-font;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--text);
+  transition: color 0.2s ease-out;
+}
+
+.project-card-link-icon {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gold);
+  opacity: 0.6;
+  transition: opacity 0.2s ease-out;
+}
+
+.project-card-desc {
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .project-card-icon,
+  .project-card-title,
+  .project-card-link-icon {
+    transition: none;
+  }
+  .project-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,72 @@
+// Dark Luxury navigation styling
+
+#sideNav {
+  background-color: var(--panel);
+
+  .navbar-toggler {
+    border-color: var(--line);
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--soft);
+    transition: color 0.2s ease-out, box-shadow 0.2s ease-out;
+
+    &:hover,
+    &:focus {
+      color: var(--text);
+    }
+
+    &.active,
+    &:active {
+      color: var(--gold);
+      box-shadow: inset 0 -2px 0 0 var(--red);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: $sidebar-base-width;
+    height: 100vh;
+    .navbar-brand {
+      display: flex;
+
+      margin: auto auto 0;
+      padding: 0.5rem;
+      .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: 0.5rem solid var(--panel-2);
+      }
+    }
+    .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+
+      width: 100%;
+      margin-bottom: auto;
+      .navbar-nav {
+        flex-direction: column;
+
+        width: 100%;
+        .nav-item {
+          display: block;
+          .nav-link {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
